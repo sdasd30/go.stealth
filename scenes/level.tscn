@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2kipfvsomeng"]
+
+[ext_resource type="Texture2D" uid="uid://cllgcxym8rgcv" path="res://icon.svg" id="1_c6401"]
+[ext_resource type="PackedScene" uid="uid://dwl3bilmjksem" path="res://scenes/Objects/player.tscn" id="1_noijy"]
+[ext_resource type="Script" path="res://Scripts/Logo.gd" id="3_7l62q"]
+[ext_resource type="Texture2D" uid="uid://mmxydrwlxitv" path="res://graphics/random-icon.png" id="4_mqd7x"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_noijy")]
+position = Vector2(423, 113)
+scale = Vector2(2, 2)
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(174.5, 143.5)
+scale = Vector2(1.64844, 1.64844)
+texture = ExtResource("1_c6401")
+region_rect = Rect2(-65.8286, -35.6293, 153.537, 112.895)
+script = ExtResource("3_7l62q")
+
+[node name="Random-icon" type="Sprite2D" parent="Logo"]
+position = Vector2(162, 21)
+scale = Vector2(2, 2)
+texture = ExtResource("4_mqd7x")
